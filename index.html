@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Addition Form</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <form id="additionForm">
+            <div class="form-group">
+                <label for="number1">Number 1:</label>
+                <input type="number" id="number1" required>
+            </div>
+            <div class="form-group">
+                <label for="number2">Number 2:</label>
+                <input type="number" id="number2" required>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="addNumbers()">Submit</button>
+            </div>
+            <div class="form-group">
+                <label for="result">Result:</label>
+                <input type="text" id="result" readonly>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function addNumbers() {
+            // Get the values from the input fields
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+
+            // Add the numbers
+            const sum = num1 + num2;
+
+            // Display the result
+            document.getElementById('result').value = sum;
+        }
+    </script>
+
+</body>
+</html>
